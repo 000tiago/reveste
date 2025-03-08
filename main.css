@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+overflow-x: hidden;
+}
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #333536;
+    padding-top: 16px ;
+    color: #fff;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container,
+footer > .container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav {
+    background-color: #0f0f0f;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, padding-bottom 0.3s ease;
+}
+
+nav li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
+}
+
+nav li a:hover {
+    color: #ddd;
+    padding-bottom: 8px;
+}
+
+nav li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu-hamburguer {
+    width: 32px;
+    cursor: pointer;
+    
+}
+
+.menu-hamburguer span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+
+.container-flex {
+    display: flex;
+}
+
+#sobre-a-loja img{
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+
+}
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-produtos {
+    flex-wrap: wrap;
+    gap: 5%
+}
+
+.lista-produtos li {
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.lista-produtos li img {
+    max-width: 100%;
+}
+
+.lista-produtos li h3 {
+    margin: 16px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: 2px solid #212223;
+    background-color: #fff;
+    color: #212223;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #212223;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.lista-produtos strong, .price strong {
+    font-weight: bold;      
+    color: #000;            
+    display: inline;         
+}
+
+
+.lista-produtos strong {
+    margin-top: 14px;      
+    margin-bottom: 14px;    
+    display: block;        
+}
+
+.price {
+    margin: 16px 0;
+    display: flex;          
+    align-items: center;   
+    gap: 8px;        
+}
+
+.price del {
+    color: #ccc;
+    font-size: 14px;
+    display: inline;        
+}
+
+.form-campo{
+    margin-bottom: 16px;
+}
+.form-campo label{
+    font-weight: bold;
+    display: block;
+}
+.form-campo input,
+.form-campo textarea{
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+.form-campo textarea{
+    resize: none;
+    height: 120px;
+}
+form{
+    max-width: 400px;
+}
+
+footer li {
+    list-style: none;
+    margin: 0 16px;
+}
+
+footer li img {
+    height: 25px;
+    display: block; 
+}
+
+
+.contato {
+    align-items: flex-start; /* Alinha no topo */
+    justify-content: space-between; /* Espaço entre form e mapa */
+}
+
+.formulario {
+    width: 50%;
+    max-width: 400px;
+}
+
+.mapa {
+    width: 45%; /* Ajuste conforme necessário */
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px; 
+}
+
+.error {
+    color: #989898; 
+    font-size: 14px; 
+    margin-top: 5px; 
+}
+.zoom-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.zoom-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.zoom-container:hover img {
+    transform: scale(1.3); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
