@@ -49,7 +49,7 @@ $(document).ready(function(){
         
         const nomeProduto = ($(this).parent().find('h3').text());
 
-        $('#produto-interesse').val(nomeVeiculo);
+        $('#interesse').val(nomeProduto);
 
         $('html, body').animate({
             scrollTop: destino.offset().top

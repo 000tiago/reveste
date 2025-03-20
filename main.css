@@ -11,6 +11,7 @@ overflow-x: hidden;
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    padding: 10px;
 }
 
 header, footer {
@@ -100,13 +101,119 @@ nav li a:hover::after {
     display: flex;
 }
 
+#sobre-a-loja {
+    padding: 20px;
+}
+
 #sobre-a-loja img{
     max-width: 400px;
     margin-right: 24px;
 }
 
+#sobre-a-loja .container-flex {
+    
+    align-items: center;
+    text-align:justify;
+}
+
+#sobre-a-loja img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 24px;
+}
+
+#sobre-a-loja .descricao {
+    flex: 1;
+    
+}
+
+  /* Quando a tela for menor que 768px, reorganiza a disposição */
+@media (max-width: 768px) {
+    #sobre-a-loja .container-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align:justify;
+    }
+    
+    #sobre-a-loja img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    }
+    
+    #sobre-a-loja .descricao {
+    width: 100%;
+    }
+}
+
+  /* Ajuste opcional de tamanho de fonte conforme a tela diminui */
+@media (max-width: 1024px) {
+    #sobre-a-loja h2,
+    #sobre-a-loja p {
+    font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    #sobre-a-loja h2,
+    #sobre-a-loja p {
+    font-size: 0.9em;
+    }
+
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        width: 100%; /* Ocupam toda a largura disponível */
+        max-width: auto; /* Sem limite de largura */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contato {
+      flex-direction: column; /* Coloca os elementos em coluna */
+      align-items: stretch;   /* Faz com que os itens ocupem toda a largura disponível */
+        text-align: center;     /* Centraliza o texto */
+        align-items: center;    /* Centraliza os elementos */
+        justify-content: space-between; /* Espaço entre form e mapa */
+    }
+
+    .formulario {
+        margin: 0 auto;  /* Centraliza horizontalmente */
+        flex-direction: column;
+        align-items: center; /* Opcional: para alinhar os elementos do formulário ao centro */
+    }
+    .contato .mapa {
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 99%; /* Sem limite de largura */
+    }
+    .lista-produtos li {
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .lista-produtos li button {
+        margin-top: auto;
+    }
+
+    .lista-produtos li .price {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: flex-start;
+        align-content: center;    
+    }
+
+.price {
+    margin: 0px;
+    gap: 0px
+}
+}
+
 section {
-    padding: 48px 0;
+    padding: 18px 0;
 
 }
 section h2 {
@@ -157,8 +264,6 @@ button:active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .lista-produtos strong, .price strong {
     font-weight: bold;      
     color: #000;            
@@ -173,7 +278,7 @@ button:active {
 }
 
 .price {
-    margin: 16px 0;
+    margin: 6px 0;
     display: flex;          
     align-items: center;   
     gap: 8px;        
@@ -216,10 +321,23 @@ footer li img {
     display: block; 
 }
 
+footer a {
+    color: #e7e7e7; /* Cor do link (azul chamativo, pode ajustar) */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Deixa o link mais destacado */
+    transition: color 0.3s ease; /* Efeito suave na mudança de cor */
+}
+
+footer a:hover {
+    color: #ffffff; /* Altera cor ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
 
 .contato {
     align-items: flex-start; /* Alinha no topo */
     justify-content: space-between; /* Espaço entre form e mapa */
+
 }
 
 .formulario {
@@ -235,6 +353,12 @@ footer li img {
     width: 100%;
     height: 300px;
     border-radius: 8px; 
+}
+.mapa p {
+    margin-top: 5px; /* Espaço acima do texto */
+    font-size: 14px; /* Tamanho menor do texto */
+    color: #2a2a2a; /* Cor cinza */
+    padding-left: 2px;
 }
 
 .error {
